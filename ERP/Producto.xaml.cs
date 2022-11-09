@@ -21,7 +21,7 @@ namespace ERP
     {
         public string id  {get; set;}
         public string nombre { get; set; }
-        public double precio { get; set; }
+        public string precio { get; set; }
         public string sucursal { get; set; }
         
         conexionProducto newConexionProducto = new conexionProducto();
@@ -39,7 +39,7 @@ namespace ERP
 
         private void precio_txt_TextChanged(object sender, TextChangedEventArgs e)
         {
-            precio = Convert.ToDouble(precio_txt.Text);
+            precio = precio_txt.Text;
         }
 
         private void nombre_txt_TextChanged(object sender, TextChangedEventArgs e)
@@ -54,7 +54,7 @@ namespace ERP
 
         private void guardar_btn_Click(object sender, RoutedEventArgs e)
         {
-            crearProducto p1 = new crearProducto(id, nombre, precio, sucursal);
+            crearProducto p1 = new crearProducto(id, nombre, Convert.ToDouble(precio), sucursal);
         }
 
         private void modificar_btn_Click(object sender, RoutedEventArgs e)
@@ -68,7 +68,7 @@ namespace ERP
                     datosObtenidos = newConexionProducto.modificar(id);
                     //id = datosObtenidos[0];
                     nombre = datosObtenidos[0];
-                    precio = Convert.ToDouble(datosObtenidos[1]);
+                    precio = datosObtenidos[1];
                     sucursal = datosObtenidos[2];
 
                     //codigo_txt.Text = id;
