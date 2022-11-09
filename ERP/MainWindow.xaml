@@ -1,0 +1,15 @@
+﻿<Window x:Class="ERP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERP"
+        mc:Ignorable="d"
+        Title="Menú Principal" Height="404" Width="790">
+    <Grid Margin="0,0,10,74">
+        <Button x:Name="registrarse_btn" Content="Registrarse" HorizontalAlignment="Left" Margin="422,147,0,0" VerticalAlignment="Top" Height="38" Width="132" Click="Button_Click_1"/>
+        <Button x:Name="salir_btn" Content="Salir" HorizontalAlignment="Left" Margin="648,252,0,0" VerticalAlignment="Top" Height="35" Width="89"/>
+        <Button x:Name="iniciarSesion_btn" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="422,83,0,0" VerticalAlignment="Top" Height="46" Width="132" Click="Button_Click"/>
+
+    </Grid>
+</Window>

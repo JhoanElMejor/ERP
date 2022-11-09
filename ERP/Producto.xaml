@@ -1,0 +1,33 @@
+﻿<Window x:Class="ERP.Producto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERP"
+        mc:Ignorable="d"
+        Title="Producto" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="codigo_txt" HorizontalAlignment="Left" Margin="268,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" TextChanged="codigo_txt_TextChanged"/>
+        <TextBox x:Name="sucursal_txt" HorizontalAlignment="Left" Margin="468,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" TextChanged="sucursal_txt_TextChanged"/>
+        <TextBox x:Name="precio_txt" HorizontalAlignment="Left" Margin="468,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" TextChanged="precio_txt_TextChanged"/>
+        <TextBox x:Name="nombre_txt" HorizontalAlignment="Left" Margin="270,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" RenderTransformOrigin="0.5,0.5" TextChanged="nombre_txt_TextChanged">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.009"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="304,167,0,0" VerticalAlignment="Top"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="500,85,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sucursal" HorizontalAlignment="Left" Margin="505,156,0,0" VerticalAlignment="Top"/>
+        <Label Content="Código" HorizontalAlignment="Left" Margin="309,85,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="guardar_btn" Content="Guardar" HorizontalAlignment="Left" Margin="294,320,0,0" VerticalAlignment="Top" Height="39" Width="83" Click="guardar_btn_Click"/>
+        <Button x:Name="modificar_btn" Content="Modificar" HorizontalAlignment="Left" Margin="425,320,0,0" VerticalAlignment="Top" Height="39" Width="86" Click="modificar_btn_Click"/>
+        <Button x:Name="salir_btn" Content="Salir" HorizontalAlignment="Left" Margin="654,320,0,0" VerticalAlignment="Top" Height="39" Width="86"/>
+        <Label x:Name="advertencia_lbl" Content="[Advertencia]" HorizontalAlignment="Left" Margin="529,327,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

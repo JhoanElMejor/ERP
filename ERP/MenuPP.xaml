@@ -1,0 +1,21 @@
+﻿<Window x:Class="ERP.MenuPP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERP"
+        mc:Ignorable="d"
+        Title="MenuPP" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="769*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="factura_btn" Grid.Column="1" Content="Factura" HorizontalAlignment="Left" Margin="71,110,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
+        <Button x:Name="cliente_btn" Grid.Column="1" Content="Cliente" HorizontalAlignment="Left" Margin="71,163,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
+        <Button x:Name="marca_btn" Grid.Column="1" Content="Marca" HorizontalAlignment="Left" Margin="71,217,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
+        <Button x:Name="producto_btn" Grid.Column="1" Content="Producto" HorizontalAlignment="Left" Margin="71,276,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="producto_btn_Click"/>
+        <Button x:Name="salir_btn" Grid.Column="1" Content="Salir" HorizontalAlignment="Left" Margin="594,321,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
+
+    </Grid>
+</Window>

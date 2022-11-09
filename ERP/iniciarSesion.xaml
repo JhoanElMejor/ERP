@@ -1,0 +1,17 @@
+﻿<Window x:Class="ERP.iniciarSesion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERP"
+        mc:Ignorable="d"
+        Title="iniciarSesion" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="usuario_txt" HorizontalAlignment="Left" Margin="465,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" TextChanged="usuario_txt_TextChanged"/>
+        <TextBox x:Name="password_txt" HorizontalAlignment="Left" Margin="465,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" TextChanged="password_txt_TextChanged"/>
+        <Button x:Name="entrar_btn" Content="Ingresar" HorizontalAlignment="Left" Margin="505,276,0,0" VerticalAlignment="Top" Height="31" Width="69" Click="entrar_btn_Click"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="385,163,0,0" VerticalAlignment="Top"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="385,221,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
