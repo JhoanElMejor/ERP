@@ -26,7 +26,7 @@
         <Label Content="Código" HorizontalAlignment="Left" Margin="309,85,0,0" VerticalAlignment="Top"/>
         <Button x:Name="guardar_btn" Content="Guardar" HorizontalAlignment="Left" Margin="294,320,0,0" VerticalAlignment="Top" Height="39" Width="83" Click="guardar_btn_Click"/>
         <Button x:Name="modificar_btn" Content="Modificar" HorizontalAlignment="Left" Margin="425,320,0,0" VerticalAlignment="Top" Height="39" Width="86" Click="modificar_btn_Click"/>
-        <Button x:Name="salir_btn" Content="Salir" HorizontalAlignment="Left" Margin="654,320,0,0" VerticalAlignment="Top" Height="39" Width="86"/>
+        <Button x:Name="salir_btn" Content="Menu" HorizontalAlignment="Left" Margin="654,320,0,0" VerticalAlignment="Top" Height="39" Width="86"/>
         <Label x:Name="advertencia_lbl" Content="[Advertencia]" HorizontalAlignment="Left" Margin="529,327,0,0" VerticalAlignment="Top"/>
 
     </Grid>

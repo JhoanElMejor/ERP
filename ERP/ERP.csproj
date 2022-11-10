@@ -93,6 +93,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Clientes.xaml.cs">
+      <DependentUpon>Clientes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="conexionPersona.cs" />
     <Compile Include="conexionProducto.cs" />
     <Compile Include="Datos\ConexionBD.cs" />
@@ -110,6 +113,10 @@
     <Compile Include="registroUsuario.xaml.cs">
       <DependentUpon>registroUsuario.xaml</DependentUpon>
     </Compile>
+    <Page Include="Clientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="iniciarSesion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

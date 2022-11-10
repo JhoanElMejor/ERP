@@ -29,5 +29,13 @@ namespace ERP
             Producto ventanaProduto = new Producto();
             ventanaProduto.Show();
         }
+
+        private void cliente_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            clientes.Show();
+            MenuPP menuPP = new MenuPP();
+            menuPP.Hide();
+        }
     }
 }
