@@ -37,5 +37,12 @@ namespace ERP
             MenuPP menuPP = new MenuPP();
             menuPP.Hide();
         }
+
+        private void factura_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Factura f = new Factura();
+            f.Show();
+            this.Hide();
+        }
     }
 }

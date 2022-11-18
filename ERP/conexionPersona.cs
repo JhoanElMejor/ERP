@@ -15,7 +15,9 @@ namespace ERP
 {
     public class conexionPersona : ConexionBD
     {
-        public string usuario, password;
+        public string usuario { get; set; }
+        public string password { get; set; }
+        public string id { get; set; }
         public conexionPersona()
         {
             
@@ -58,6 +60,7 @@ namespace ERP
 
         public void crearCliente(string _nombre, string _apellido, string _id, string _direccion, string _telefono)
         {
+            id = _id;
             bool verif = false;
             MySqlCommand cmd;
             string consulta = "";
@@ -83,25 +86,32 @@ namespace ERP
 
             if (verif)
             {
-                try
+                if(_nombre != null && _apellido != null && _id != null && _direccion != null && _telefono != null)
                 {
-                    getEnlace().Open();
-                    consulta = "update cliente set nombre = @n, apellido = @a, identificacion = @i, direccion =  @d, telefono = @t where identificacion = @id  ";
-                    cmd = new MySqlCommand(consulta, getEnlace());
-                    cmd.Parameters.Clear();
-                    cmd.Parameters.AddWithValue("@n", _nombre);
-                    cmd.Parameters.AddWithValue("@a", _apellido);
-                    cmd.Parameters.AddWithValue("@i", _id);
-                    cmd.Parameters.AddWithValue("@id", _id);
-                    cmd.Parameters.AddWithValue("@d", _direccion);
-                    cmd.Parameters.AddWithValue("@t", _telefono);
-                    cmd.ExecuteReader();
-                    MessageBox.Show("Cliente actualizado con exito!");
-                }
-                catch (Exception e)
+                    try
+                    {
+                        getEnlace().Open();
+                        consulta = "update cliente set nombre = @n, apellido = @a, identificacion = @i, direccion =  @d, telefono = @t where identificacion = @id  ";
+                        cmd = new MySqlCommand(consulta, getEnlace());
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@n", _nombre);
+                        cmd.Parameters.AddWithValue("@a", _apellido);
+                        cmd.Parameters.AddWithValue("@i", _id);
+                        cmd.Parameters.AddWithValue("@id", _id);
+                        cmd.Parameters.AddWithValue("@d", _direccion);
+                        cmd.Parameters.AddWithValue("@t", _telefono);
+                        cmd.ExecuteReader();
+                        MessageBox.Show("Cliente actualizado con exito!");
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(Convert.ToString(e));
+                    }
+                }else
                 {
-                    MessageBox.Show(Convert.ToString(e));
+                    MessageBox.Show("Llene todos los campos!");
                 }
+                
 
                 getEnlace().Close();
             }
@@ -136,14 +146,14 @@ namespace ERP
         {
             List<String> datosCliente = new List<String>();
             MySqlDataReader info;
-            //string id = _id;
+            id = _id;
             try
             {
                 getEnlace().Open();
                 string consulta = "select nombre, apellido, direccion, telefono, identificacion from cliente where identificacion = @id";
                 MySqlCommand cmd = new MySqlCommand(consulta, getEnlace());
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", _id);
+                cmd.Parameters.AddWithValue("@id", id);
                 info = cmd.ExecuteReader();
                 info.Read();
                 datosCliente.Add(info.GetString(0));

@@ -66,18 +66,18 @@ namespace ERP
 
         private void modificar_btn_Click(object sender, RoutedEventArgs e)
         {
-            if (id != null)
+            if (id == null)//error a hora de modificar 2 clientes a la vez
+            {
+                MessageBox.Show("Pon la identificacion en el campo **identificacion**");
+            }
+            else
             {
                 List<string> datosClientes = conexionPersona.modificarCliente(id);
                 nombre_txt.Text = datosClientes[0];
                 apellido_txt.Text = datosClientes[1];
                 direccion_txt.Text = datosClientes[2];
-                telefono_txt.Text= datosClientes[3];
+                telefono_txt.Text = datosClientes[3];
                 id_txt.Text = datosClientes[4];
-            }
-            else
-            {
-                MessageBox.Show("Pon la identificacion en el campo ''identificion''");
             }
             
         }

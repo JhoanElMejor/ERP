@@ -11,7 +11,7 @@
             <ColumnDefinition Width="31*"/>
             <ColumnDefinition Width="769*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="factura_btn" Grid.Column="1" Content="Factura" HorizontalAlignment="Left" Margin="71,110,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
+        <Button x:Name="factura_btn" Grid.Column="1" Content="Factura" HorizontalAlignment="Left" Margin="71,110,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="factura_btn_Click"/>
         <Button x:Name="cliente_btn" Grid.Column="1" Content="Cliente" HorizontalAlignment="Left" Margin="71,163,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="cliente_btn_Click"/>
         <Button x:Name="marca_btn" Grid.Column="1" Content="Marca" HorizontalAlignment="Left" Margin="71,217,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
         <Button x:Name="producto_btn" Grid.Column="1" Content="Producto" HorizontalAlignment="Left" Margin="71,276,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="producto_btn_Click"/>

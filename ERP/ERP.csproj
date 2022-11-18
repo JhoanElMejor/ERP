@@ -96,9 +96,14 @@
     <Compile Include="Clientes.xaml.cs">
       <DependentUpon>Clientes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="conexionFactura.cs" />
     <Compile Include="conexionPersona.cs" />
     <Compile Include="conexionProducto.cs" />
+    <Compile Include="crearFactura.cs" />
     <Compile Include="Datos\ConexionBD.cs" />
+    <Compile Include="Factura.xaml.cs">
+      <DependentUpon>Factura.xaml</DependentUpon>
+    </Compile>
     <Compile Include="iniciarSesion.xaml.cs">
       <DependentUpon>iniciarSesion.xaml</DependentUpon>
     </Compile>
@@ -114,6 +119,10 @@
       <DependentUpon>registroUsuario.xaml</DependentUpon>
     </Compile>
     <Page Include="Clientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Factura.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

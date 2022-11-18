@@ -1,0 +1,62 @@
+﻿<Window x:Class="ERP.Factura"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERP"
+        mc:Ignorable="d"
+        Title="Factura" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Button x:Name="guardar_btn" Content="Guardar" HorizontalAlignment="Left" Margin="244,371,0,0" VerticalAlignment="Top" Height="38" Width="68" Click="Button_Click"/>
+        <Button x:Name="regresar_btn" Content="Regresar" HorizontalAlignment="Left" Margin="345,371,0,0" VerticalAlignment="Top" Height="38" Width="86" Click="Button_Click_2"/>
+        <Label Content="Numero" HorizontalAlignment="Left" Margin="74,76,0,0" VerticalAlignment="Top" Height="35" Width="56"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="286,256,0,0" VerticalAlignment="Top" Height="28" Width="48"/>
+        <Label Content="Cantidad" HorizontalAlignment="Left" Margin="70,256,0,0" VerticalAlignment="Top" Height="28" Width="60"/>
+        <Label Content="Cliente" HorizontalAlignment="Left" Margin="78,140,0,0" VerticalAlignment="Top" Height="35" Width="48"/>
+        <Label Content="ID Producto" HorizontalAlignment="Left" Margin="64,0,0,0" VerticalAlignment="Center" Height="36" Width="76"/>
+        <Label Content="valor total + IVA %19" HorizontalAlignment="Left" Margin="100,315,0,0" VerticalAlignment="Top" Height="34" Width="134"/>
+        <TextBox x:Name="numFactura_txt" HorizontalAlignment="Left" Margin="146,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="35" TextChanged="numFactura_txt_TextChanged"/>
+        <TextBox x:Name="codigoProducto_txt" HorizontalAlignment="Left" Margin="146,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="132" Height="35" TextChanged="codigoProducto_txt_TextChanged"/>
+        <TextBox x:Name="identificacion_txt" HorizontalAlignment="Left" Margin="146,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="35" TextChanged="identificacion_txt_TextChanged" TouchEnter="identificacion_txt_TouchEnter"/>
+        <TextBox x:Name="cantidades_txt" HorizontalAlignment="Left" Margin="146,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="35" TextChanged="cantidades_txt_TextChanged"/>
+        <TextBox x:Name="nombreProducto_txt" HorizontalAlignment="Left" Margin="345,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="132" Height="35" TextChanged="descripcionProducto_txt_TextChanged"/>
+        <TextBox x:Name="nombreCliente_txt" HorizontalAlignment="Left" Margin="345,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="35" TextChanged="nombreCliente_txt_TextChanged"/>
+        <TextBox x:Name="fechaFactura_txt" HorizontalAlignment="Left" Margin="345,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Height="35" TextChanged="fechaFactura_TextChanged"/>
+        <TextBox x:Name="valorProducto_txt" HorizontalAlignment="Left" Margin="345,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="35" TextChanged="valorProducto_txt_TextChanged"/>
+        <TextBox x:Name="valorFactura_txt" HorizontalAlignment="Left" Margin="244,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="36" TextChanged="valorFactura_txt_TextChanged"/>
+        <Button x:Name="cargar_btn" Content="Cargar" HorizontalAlignment="Left" Margin="402,310,0,0" VerticalAlignment="Top" Height="36" Width="82" Click="imprimir_btn_Click"/>
+        <TextBox x:Name="descuento_txt" HorizontalAlignment="Left" Margin="598,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="35" TextChanged="valorProducto_txt_TextChanged"/>
+        <Label Content="Descuento" HorizontalAlignment="Left" Margin="529,222,0,0" VerticalAlignment="Top" Height="35" Width="69"/>
+        <Button x:Name="imprimir_btn" Content="Imprimir factura" HorizontalAlignment="Left" Margin="530,343,0,0" VerticalAlignment="Top" Height="68" Width="100" RenderTransformOrigin="0.4,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.76"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.663"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="totalizar_btn" Content="Totalizar" HorizontalAlignment="Left" Margin="631,299,0,0" VerticalAlignment="Top" Height="30" Width="72" Click="Button_Click_3" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.133"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="subtotal_txt" HorizontalAlignment="Left" Margin="529,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="31" RenderTransformOrigin="0.5,0.5" TextChanged="subtotal_txt_TextChanged">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
+    </Grid>
+</Window>
