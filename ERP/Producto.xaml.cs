@@ -86,9 +86,14 @@ namespace ERP
 
             }
             
+        }
 
-
-            
+        private void salir_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MenuPP menuPP = new MenuPP();
+            menuPP.Show();
+            this.Close();
         }
     }
 }

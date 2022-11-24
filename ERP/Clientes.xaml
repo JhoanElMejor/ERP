@@ -7,18 +7,21 @@
         mc:Ignorable="d"
         Title="Clientes" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="direccion_txt" HorizontalAlignment="Left" Margin="395,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="41" TextChanged="direccion_txt_TextChanged"/>
-        <TextBox x:Name="id_txt" HorizontalAlignment="Left" Margin="134,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="41" TextChanged="id_txt_TextChanged"/>
-        <TextBox x:Name="apellido_txt" HorizontalAlignment="Left" Margin="395,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="41" TextChanged="apellido_txt_TextChanged"/>
-        <TextBox x:Name="nombre_txt" HorizontalAlignment="Left" Margin="134,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="41" TextChanged="nombre_txt_TextChanged"/>
-        <TextBox x:Name="telefono_txt" HorizontalAlignment="Left" Margin="264,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="41" TextChanged="telefono_txt_TextChanged"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="175,75,0,0" VerticalAlignment="Top" Height="31" Width="63"/>
-        <Label Content="Apellido" HorizontalAlignment="Left" Margin="449,75,0,0" VerticalAlignment="Top" Height="31" Width="63"/>
-        <Label Content="Identificacion" HorizontalAlignment="Left" Margin="189,193,0,0" VerticalAlignment="Top" Height="31" Width="86"/>
-        <Label Content="Dirección" HorizontalAlignment="Left" Margin="449,193,0,0" VerticalAlignment="Top" Height="31" Width="63"/>
-        <Label Content="Telefono" HorizontalAlignment="Left" Margin="336,276,0,0" VerticalAlignment="Top" Height="31" Width="64"/>
-        <Button x:Name="guardar_btn" Content="Guardar" HorizontalAlignment="Left" Margin="347,380,0,0" VerticalAlignment="Top" Height="39" Width="84" Click="guardar_btn_Click"/>
-        <Button x:Name="modificar_btn" Content="Modificar" HorizontalAlignment="Left" Margin="517,380,0,0" VerticalAlignment="Top" Height="39" Width="86" Click="modificar_btn_Click"/>
-        <Button x:Name="salir_btn" Content="Menú" HorizontalAlignment="Left" Margin="673,380,0,0" VerticalAlignment="Top" Height="39" Width="86"/>
+        <Image  Margin="0" x:Name="image1"  Stretch="UniformToFill" 
+           Source="Resources\FondoPP.jpg" />
+        <TextBox x:Name="direccion_txt" HorizontalAlignment="Left" Margin="182,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="32" TextChanged="direccion_txt_TextChanged"/>
+        <TextBox x:Name="id_txt" HorizontalAlignment="Left" Margin="182,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="32" TextChanged="id_txt_TextChanged"/>
+        <TextBox x:Name="apellido_txt" HorizontalAlignment="Left" Margin="182,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="31" TextChanged="apellido_txt_TextChanged"/>
+        <TextBox x:Name="nombre_txt" HorizontalAlignment="Left" Margin="182,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="31" TextChanged="nombre_txt_TextChanged"/>
+        <TextBox x:Name="telefono_txt" HorizontalAlignment="Left" Margin="182,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="31" TextChanged="telefono_txt_TextChanged" RenderTransformOrigin="0.57,0.525"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="52,50,0,0" VerticalAlignment="Top" Height="31" Width="64"/>
+        <Label Content="Apellido" HorizontalAlignment="Left" Margin="52,111,0,0" VerticalAlignment="Top" Height="31" Width="63"/>
+        <Label Content="Identificacion" HorizontalAlignment="Left" Margin="52,174,0,0" VerticalAlignment="Top" Height="31" Width="86"/>
+        <Label Content="Dirección" HorizontalAlignment="Left" Margin="52,235,0,0" VerticalAlignment="Top" Height="32" Width="62"/>
+        <Label Content="Telefono" HorizontalAlignment="Left" Margin="52,294,0,0" VerticalAlignment="Top" Height="31" Width="64"/>
+        <Button x:Name="guardar_btn" Content="Guardar" HorizontalAlignment="Left" Margin="182,370,0,0" VerticalAlignment="Top" Height="30" Width="96" Click="guardar_btn_Click"/>
+        <Button x:Name="modificar_btn" Content="Modificar" HorizontalAlignment="Left" Margin="316,370,0,0" VerticalAlignment="Top" Height="30" Width="96" Click="modificar_btn_Click"/>
+        <Button x:Name="salir_btn" Content="Regresar" HorizontalAlignment="Left" Margin="668,366,0,0" VerticalAlignment="Top" Height="34" Width="77" Click="salir_btn_Click"/>
+        <Image HorizontalAlignment="Left" Height="144" Margin="508,142,0,0" VerticalAlignment="Top" Width="150" Source="/Resources/agregar-cliente.png" Stretch="UniformToFill"/>
     </Grid>
 </Window>

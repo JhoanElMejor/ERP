@@ -36,9 +36,29 @@ namespace ERP
             password = password_txt.Text;
         }
 
+        private void volver_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MainWindow menuPP = new MainWindow();
+            menuPP.Show();
+            this.Close();
+        }
+
         private void entrar_btn_Click(object sender, RoutedEventArgs e)
         {
-            newConexionPersona.autentificar(user, password);
+            bool verif = newConexionPersona.autentificar(user, password);
+
+            if (verif)
+            {
+                this.Hide();
+                MenuPP ventanaMenuPP = new MenuPP();
+                ventanaMenuPP.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Al parecer no estás, crea una cuenta!!");
+            }
         }
     }
 }

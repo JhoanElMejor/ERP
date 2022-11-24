@@ -40,14 +40,16 @@ namespace ERP
                 try
                 {
                     getEnlace().Open();
-                    string consulta = "insert into factura  (cliente, usuario, fecha_facturacion, total, subtotal, descuento) values (@cliente, @usuario, @fecha, @total, @subtotal, @descuento)";
+                    string consulta = "insert into factura  (numero, cliente, usuario, fecha_facturacion, total, subtotal, IVA, descuento) values (@numero, @cliente, @usuario, @fecha, @total, @subtotal, @IVA, @descuento)";
                     MySqlCommand cmd = new MySqlCommand(consulta, getEnlace());
                     cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@numero", codigoFactura);
                     cmd.Parameters.AddWithValue("@cliente", Convert.ToInt64(identificacion));
                     cmd.Parameters.AddWithValue("@usuario", usuario);
                     cmd.Parameters.AddWithValue("@fecha", fechaFactura);
                     cmd.Parameters.AddWithValue("@total", total);
                     cmd.Parameters.AddWithValue("@subtotal", subtotal);
+                    cmd.Parameters.AddWithValue("@IVA", 19);
                     cmd.Parameters.AddWithValue("@descuento", descuento);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Factura generada con exito!");
@@ -58,9 +60,6 @@ namespace ERP
                 }
                 getEnlace().Close();
             }
-
-            detalleFactura();
-            
         }
 
         public void detalleFactura()
@@ -80,7 +79,8 @@ namespace ERP
 
                 MessageBox.Show("Entra a detalle de factura");
 
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(Convert.ToString(e));
             }
@@ -99,15 +99,16 @@ namespace ERP
                 MySqlCommand cmd = new MySqlCommand(consulta, getEnlace());
                 MySqlDataReader info = cmd.ExecuteReader();
 
-                while(info.Read())
+                while (info.Read())
                 {
-                   if(info.GetString(0) == _codigoFactura)
+                    if (info.GetString(0) == _codigoFactura)
                     {
                         res = true;
                         break;
-                    } 
+                    }
                 }
-            }catch( Exception e)
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(Convert.ToString(e));
 
@@ -115,6 +116,34 @@ namespace ERP
             getEnlace().Close();
 
             return res;
+        }
+
+        public bool verificadorIdFactura()
+        {
+            bool verif = false;
+
+            try
+            {
+                getEnlace().Open();
+                string consulta= "select numero from factura where numero = @numero";
+                MySqlCommand cmd = new MySqlCommand(consulta, getEnlace());
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@numero",codigoFactura);
+                MySqlDataReader info = cmd.ExecuteReader();
+                while(info.Read())
+                {
+                    if(info.GetString(0) == codigoFactura)
+                    {
+                        verif = true;
+                    }
+                }
+              
+            }catch(Exception e)
+            {
+                MessageBox.Show(Convert.ToString(e));
+            }
+
+            return verif;
         }
     }
 }

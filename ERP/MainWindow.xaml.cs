@@ -33,8 +33,28 @@ namespace ERP
 
         private void Button_Click(object sender, RoutedEventArgs e)//iniciar sesion
         {
-            iniciarSesion menuPrincipal = new iniciarSesion();
-            menuPrincipal.Show();
+            this.Hide();
+            iniciarSesion iniciarSesion = new iniciarSesion();
+            iniciarSesion.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            registroUsuario registroUsuario = new registroUsuario();
+            registroUsuario.Show();
+        }
+
+        private void salir_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("¿Desea Salir?", "Salir", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes) 
+            {
+                this.Close();
+            }
+
         }
     }
 }

@@ -6,12 +6,23 @@
         xmlns:local="clr-namespace:ERP"
         mc:Ignorable="d"
         Title="iniciarSesion" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="usuario_txt" HorizontalAlignment="Left" Margin="465,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" TextChanged="usuario_txt_TextChanged"/>
-        <TextBox x:Name="password_txt" HorizontalAlignment="Left" Margin="465,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" TextChanged="password_txt_TextChanged"/>
-        <Button x:Name="entrar_btn" Content="Ingresar" HorizontalAlignment="Left" Margin="505,276,0,0" VerticalAlignment="Top" Height="31" Width="69" Click="entrar_btn_Click"/>
-        <Label Content="Usuario" HorizontalAlignment="Left" Margin="385,163,0,0" VerticalAlignment="Top"/>
-        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="385,221,0,0" VerticalAlignment="Top"/>
 
+
+    <Grid>
+        <Image  Margin="0" Name="image1"  Stretch="UniformToFill" 
+           Source="Resources\Fondo_Inicio.jpg" />
+        <TextBox x:Name="usuario_txt" HorizontalAlignment="Left" Margin="151,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" TextChanged="usuario_txt_TextChanged"/>
+        <TextBox x:Name="password_txt" HorizontalAlignment="Left" Margin="151,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Height="30" TextChanged="password_txt_TextChanged"/>
+        <Button x:Name="entrar_btn" Content="Ingresar" HorizontalAlignment="Left" Margin="117,326,0,0" VerticalAlignment="Top" Height="30" Width="69" Click="entrar_btn_Click"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="56,208,0,0" VerticalAlignment="Top"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="56,256,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="99" Margin="66,67,0,0" VerticalAlignment="Top" Width="136" Source="/Logo.png" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="132" Margin="91,67,0,0" VerticalAlignment="Top" Width="139" Source="/Resources/Logo1.png"/>
+        <Button x:Name="volver_btn" Content="Volver" HorizontalAlignment="Left" Margin="686,356,0,0" VerticalAlignment="Top" Height="42" Width="70" Click="volver_btn_Click"/>
     </Grid>
+
+
+
+
+
 </Window>

@@ -7,10 +7,13 @@
         mc:Ignorable="d"
         Title="Producto" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="codigo_txt" HorizontalAlignment="Left" Margin="268,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" TextChanged="codigo_txt_TextChanged"/>
-        <TextBox x:Name="sucursal_txt" HorizontalAlignment="Left" Margin="468,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" TextChanged="sucursal_txt_TextChanged"/>
-        <TextBox x:Name="precio_txt" HorizontalAlignment="Left" Margin="468,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" TextChanged="precio_txt_TextChanged"/>
-        <TextBox x:Name="nombre_txt" HorizontalAlignment="Left" Margin="270,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="33" RenderTransformOrigin="0.5,0.5" TextChanged="nombre_txt_TextChanged">
+        <Image  Margin="0" x:Name="image1"  Stretch="UniformToFill" 
+           Source="Resources\FondoPP.jpg" />
+        <TextBox x:Name="codigo_txt" HorizontalAlignment="Left" Margin="146,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" TextChanged="codigo_txt_TextChanged"/>
+        <TextBox x:Name="sucursal_txt" HorizontalAlignment="Left" Margin="146,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" TextChanged="sucursal_txt_TextChanged"/>
+        <TextBox x:Name="precio_txt" HorizontalAlignment="Left" Margin="146,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33" TextChanged="precio_txt_TextChanged"/>
+        <TextBox x:Name="nombre_txt" HorizontalAlignment="Left" Margin="147,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="33
+                 " RenderTransformOrigin="0.5,0.5" TextChanged="nombre_txt_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,14 +23,13 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="304,167,0,0" VerticalAlignment="Top"/>
-        <Label Content="Precio" HorizontalAlignment="Left" Margin="500,85,0,0" VerticalAlignment="Top"/>
-        <Label Content="Sucursal" HorizontalAlignment="Left" Margin="505,156,0,0" VerticalAlignment="Top"/>
-        <Label Content="Código" HorizontalAlignment="Left" Margin="309,85,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="guardar_btn" Content="Guardar" HorizontalAlignment="Left" Margin="294,320,0,0" VerticalAlignment="Top" Height="39" Width="83" Click="guardar_btn_Click"/>
-        <Button x:Name="modificar_btn" Content="Modificar" HorizontalAlignment="Left" Margin="425,320,0,0" VerticalAlignment="Top" Height="39" Width="86" Click="modificar_btn_Click"/>
-        <Button x:Name="salir_btn" Content="Menu" HorizontalAlignment="Left" Margin="654,320,0,0" VerticalAlignment="Top" Height="39" Width="86"/>
-        <Label x:Name="advertencia_lbl" Content="[Advertencia]" HorizontalAlignment="Left" Margin="529,327,0,0" VerticalAlignment="Top"/>
-
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="52,184,0,0" VerticalAlignment="Top"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="52,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sucursal" HorizontalAlignment="Left" Margin="52,254,0,0" VerticalAlignment="Top"/>
+        <Label Content="Código" HorizontalAlignment="Left" Margin="52,67,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="guardar_btn" Content="Guardar" HorizontalAlignment="Left" Margin="146,327,0,0" VerticalAlignment="Top" Height="32" Width="86" Click="guardar_btn_Click"/>
+        <Button x:Name="modificar_btn" Content="Modificar" HorizontalAlignment="Left" Margin="250,327,0,0" VerticalAlignment="Top" Height="32" Width="86" Click="modificar_btn_Click"/>
+        <Button x:Name="salir_btn" Content="Regresar" HorizontalAlignment="Left" Margin="678,363,0,0" VerticalAlignment="Top" Height="32" Width="72" Click="salir_btn_Click"/>
+        <Image HorizontalAlignment="Left" Height="142" Margin="462,124,0,0" VerticalAlignment="Top" Width="139" Source="/Resources/producto.png" Stretch="UniformToFill"/>
     </Grid>
 </Window>

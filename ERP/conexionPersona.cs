@@ -22,7 +22,7 @@ namespace ERP
         {
             
         }
-        public void autentificar(string _usuario, string _password)
+        public bool autentificar(string _usuario, string _password)
         {
             usuario = _usuario;
             password = _password;
@@ -40,22 +40,13 @@ namespace ERP
                         verif = true;
                     }
                 }
-
-                if (verif)
-                {
-                    MenuPP ventanaMenuPP = new MenuPP();
-                    ventanaMenuPP.Show();
-                }
-                else
-                {
-                    MessageBox.Show("No estás, crea una cuenta!!");
-                }
             }
             catch (Exception e)
             {
                 MessageBox.Show(Convert.ToString(e));
             }
             getEnlace().Close();
+            return verif;
         }
 
         public void crearCliente(string _nombre, string _apellido, string _id, string _direccion, string _telefono)

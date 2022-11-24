@@ -26,23 +26,50 @@ namespace ERP
 
         private void producto_btn_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Producto ventanaProduto = new Producto();
             ventanaProduto.Show();
+            this.Close();
         }
 
         private void cliente_btn_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Clientes clientes = new Clientes();
             clientes.Show();
-            MenuPP menuPP = new MenuPP();
-            menuPP.Hide();
+            this.Close();
         }
 
         private void factura_btn_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             Factura f = new Factura();
             f.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void salir_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+            var result = MessageBox.Show("¿Desea Salir?", "Salir", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void cerrarSesion_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("¿Estás seguro?", "cerrar sesion", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Hide();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -7,9 +7,17 @@
         mc:Ignorable="d"
         Title="Menú Principal" Height="404" Width="790">
     <Grid Margin="0,0,10,74">
-        <Button x:Name="registrarse_btn" Content="Registrarse" HorizontalAlignment="Left" Margin="422,147,0,0" VerticalAlignment="Top" Height="38" Width="132" Click="Button_Click_1"/>
-        <Button x:Name="salir_btn" Content="Salir" HorizontalAlignment="Left" Margin="648,252,0,0" VerticalAlignment="Top" Height="35" Width="89"/>
-        <Button x:Name="iniciarSesion_btn" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="422,83,0,0" VerticalAlignment="Top" Height="46" Width="132" Click="Button_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="279*"/>
+        </Grid.RowDefinitions>
+        <Image  Margin="0,0,-16,-73" x:Name="image1"  Stretch="UniformToFill" 
+           Source="Resources\Fondo.jpg" Grid.RowSpan="2" />
+
+        <Button x:Name="registrarse_btn" Content="Registrarse" HorizontalAlignment="Left" Margin="185,140,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="Button_Click_1" Grid.Row="1"/>
+        <Button x:Name="salir_btn" Content="Salir" HorizontalAlignment="Left" Margin="36,209,0,0" VerticalAlignment="Top" Height="42" Width="132" Grid.Row="1" Click="salir_btn_Click"/>
+        <Button x:Name="iniciarSesion_btn" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="36,140,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="Button_Click" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="106" Margin="50,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="148" Source="/Resources/Logo1.png" Stretch="UniformToFill"/>
 
     </Grid>
 </Window>

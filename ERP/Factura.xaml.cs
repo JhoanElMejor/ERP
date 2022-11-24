@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Math.EC;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -85,32 +86,35 @@ namespace ERP
 
         private void valorFactura_txt_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            total = Convert.ToDouble(valorFactura_txt.Text);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)// guardar
         {
-            double desc = 0;
-            descuento =  desc = Convert.ToDouble(descuento_txt.Text) / 100;
-            subtotal = Convert.ToDouble(subtotal_txt.Text);
-            double porc = Convert.ToDouble(subtotal_txt.Text) * desc;
+            descuento = 0;
+            double porc = 0;
+            try
+            {
+                descuento = Convert.ToDouble(descuento_txt.Text) / 100;
+                subtotal = Convert.ToDouble(subtotal_txt.Text);
+                porc = Convert.ToDouble(subtotal_txt.Text) * descuento;
+            }
+            catch{ }
 
-            crearFactura f1 = new crearFactura(codigoFactura, identificacion, usuario, thisDay ,total, subtotal, descuento, codigoProducto, cantidad, precio);
-
-            conexionFactura f2 = new conexionFactura();
             
 
-            if (desc >= 0.1)
+            if (descuento >= 0.1)
             {
-
                 acumulador = (acumulador + (subtotal - porc)) * 1.19;
                 string op = Convert.ToString(acumulador);
                 valorFactura_txt.Text = op;
             }else
             {
                 acumulador = (acumulador + (subtotal * 1.19));
+                valorFactura_txt.Text = Convert.ToString(acumulador);
             }
 
+            crearFactura f1 = new crearFactura(codigoFactura, identificacion, usuario, thisDay, total, subtotal, descuento * subtotal, codigoProducto, cantidad, precio);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e) // modificar
@@ -120,7 +124,10 @@ namespace ERP
 
         private void Button_Click_2(object sender, RoutedEventArgs e) //regresar
         {
-
+            this.Hide();
+            MenuPP menuPP = new MenuPP();
+            menuPP.Show();
+            this.Close();
         }
 
         private void imprimir_btn_Click(object sender, RoutedEventArgs e) // cargar
@@ -142,22 +149,6 @@ namespace ERP
 
         }
 
-        private void identificacion_txt_TouchEnter(object sender, TouchEventArgs e)
-        {
-            MessageBox.Show("touchEnter1");
-            try
-            {
-                MessageBox.Show("touchEnter2");
-                List<string> datosP = new List<string>();
-                datosP = persona.modificarCliente(identificacion);
-                nombreCliente_txt.Text = datosP[0];
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(Convert.ToString(ex));
-            }
-            
-        }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
@@ -168,6 +159,13 @@ namespace ERP
         private void subtotal_txt_TextChanged(object sender, TextChangedEventArgs e)
         {
             subtotal = Convert.ToDouble(subtotal_txt.Text);
+        }
+
+        private void imprimir_btn_Click_1(object sender, RoutedEventArgs e)
+        {
+            conexionFactura f2 = new conexionFactura();
+            f2.imprimirFactura(codigoFactura);
+
         }
     }
 }

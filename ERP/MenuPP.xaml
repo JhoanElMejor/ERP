@@ -11,11 +11,14 @@
             <ColumnDefinition Width="31*"/>
             <ColumnDefinition Width="769*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="factura_btn" Grid.Column="1" Content="Factura" HorizontalAlignment="Left" Margin="71,110,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="factura_btn_Click"/>
-        <Button x:Name="cliente_btn" Grid.Column="1" Content="Cliente" HorizontalAlignment="Left" Margin="71,163,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="cliente_btn_Click"/>
-        <Button x:Name="marca_btn" Grid.Column="1" Content="Marca" HorizontalAlignment="Left" Margin="71,217,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
-        <Button x:Name="producto_btn" Grid.Column="1" Content="Producto" HorizontalAlignment="Left" Margin="71,276,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="producto_btn_Click"/>
-        <Button x:Name="salir_btn" Grid.Column="1" Content="Salir" HorizontalAlignment="Left" Margin="594,321,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
-
+        <Image  Margin="0,0,-2,0" x:Name="image1"  Stretch="UniformToFill" 
+           Source="Resources\FondoPP2.jpg" Grid.ColumnSpan="2" />
+        <Button x:Name="factura_btn" Grid.Column="1" Content="Factura" HorizontalAlignment="Left" Margin="205,108,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="factura_btn_Click"/>
+        <Button x:Name="cliente_btn" Grid.Column="1" Content="Cliente" HorizontalAlignment="Left" Margin="333,108,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="cliente_btn_Click"/>
+        <Button x:Name="marca_btn" Grid.Column="1" Content="Marca" HorizontalAlignment="Left" Margin="425,111,0,0" VerticalAlignment="Top" Height="40" Width="80" Visibility="Hidden"/>
+        <Button x:Name="producto_btn" Grid.Column="1" Content="Producto" HorizontalAlignment="Left" Margin="465,108,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="producto_btn_Click"/>
+        <Button x:Name="salir_btn" Grid.Column="1" Content="Salir" HorizontalAlignment="Left" Margin="651,363,0,0" VerticalAlignment="Top" Height="31" Width="52" Click="salir_btn_Click"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="325,10,0,0" VerticalAlignment="Top" Width="100" Source="/Resources/Logo1.png" Stretch="UniformToFill"/>
+        <Button x:Name="cerrarSesion_btn" Grid.Column="1" Content="Cerrar sesión" HorizontalAlignment="Left" Margin="651,10,0,0" VerticalAlignment="Top" Height="25" Width="87" Click="cerrarSesion_btn_Click"/>
     </Grid>
 </Window>

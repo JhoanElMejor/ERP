@@ -182,5 +182,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Fondo_Inicio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FondoPP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FondoPP2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\agregar-cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\producto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

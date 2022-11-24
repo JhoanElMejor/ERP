@@ -41,6 +41,14 @@ namespace ERP
             id = id_txt.Text;
         }
 
+        private void salir_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MenuPP menuPP = new MenuPP();
+            menuPP.Show();
+            this.Close();
+        }
+
         private void direccion_txt_TextChanged(object sender, TextChangedEventArgs e)
         {
             direccion = direccion_txt.Text;

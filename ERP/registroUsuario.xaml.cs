@@ -51,5 +51,12 @@ namespace ERP
             nombreUsuario_txt.Clear();
             passwordUsuario_txt.Clear();
         }
+
+        private void volver_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MainWindow menuPP = new MainWindow();  
+            menuPP.Show();
+        }
     }
 }
